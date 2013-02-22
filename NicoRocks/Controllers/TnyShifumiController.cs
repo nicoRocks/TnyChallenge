@@ -106,7 +106,7 @@ namespace NicoRocks.Controllers
                 return View();
             }
         }
-        public void Gamble()
+        public ActionResult Gamble()
         {
             /*
              
@@ -131,10 +131,10 @@ fopen($URL,"r"); } //On transmet à l'arbitre
             var c = Request.QueryString["Referee"];
             var d = getRandom(3);
             var url = c + "?Game=" + a + "&MoveId=" + b + "&Value=" + d;
-            
 
-             Redirect(url);
-             ;
+
+            Redirect(url);
+            return View();
         } 
     }
 }
