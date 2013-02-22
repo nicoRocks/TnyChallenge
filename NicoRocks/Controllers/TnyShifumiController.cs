@@ -133,8 +133,8 @@ fopen($URL,"r"); } //On transmet à l'arbitre
             var url = c + "?Game=" + a + "&MoveId=" + b + "&Value=" + d;
 
 
-            Redirect(url);
-            return View();
+            return Redirect(url);
+
         } 
     }
 }
