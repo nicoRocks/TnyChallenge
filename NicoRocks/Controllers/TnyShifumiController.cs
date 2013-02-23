@@ -3,109 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TnyGames.Shifumi;
 
 namespace NicoRocks.Controllers
 {
     public class TnyShifumiController : Controller
     {
-        static Random rnd = new Random();
-        static int getRandom(int faces)
-        {
-            return rnd.Next(faces) + 1;
-        }
-        //
-        // GET: /TnyShifumi/
-
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        //
-        // GET: /TnyShifumi/Details/5
-
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        //
-        // GET: /TnyShifumi/Create
-
-        public ActionResult Create()
-        {
-            return View();
-        } 
-
-        //
-        // POST: /TnyShifumi/Create
-
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-        
-        //
-        // GET: /TnyShifumi/Edit/5
- 
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /TnyShifumi/Edit/5
-
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
- 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        //
-        // GET: /TnyShifumi/Delete/5
- 
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /TnyShifumi/Delete/5
-
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
- 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+       
         public ActionResult Gamble()
         {
             /*
@@ -129,7 +33,8 @@ fopen($URL,"r"); } //On transmet à l'arbitre
             var a = Request.QueryString["Game"];
             var b = Request.QueryString["MoveId"];
             var c = Request.QueryString["Referee"];
-            var d = getRandom(3);
+            Moteur moteur = new Moteur();
+            var d = moteur.GetValue(3);
             var url = c + "?Game=" + a + "&MoveId=" + b + "&Value=" + d;
 
 
