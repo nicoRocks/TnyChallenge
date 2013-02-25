@@ -65,7 +65,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TnyShifumiController.cs" />
-    <Compile Include="Controllers\TnyTictacpion.cs" />
+    <Compile Include="Controllers\TnyTictacpionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
