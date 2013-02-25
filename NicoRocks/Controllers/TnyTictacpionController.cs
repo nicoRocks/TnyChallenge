@@ -18,7 +18,7 @@ namespace NicoRocks.Controllers
             var e = Request.QueryString["Tray"];
             Moteur moteur = new Moteur();
             var d = moteur.GetValue(e);
-            var url = c + "?Game=" + a + "&MoveId=" + b + "&Value=" + d;
+            var url = c + "?Game=" + a + "&MoveId=" + d;
 
 
             return Redirect(url);
