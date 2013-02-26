@@ -43,7 +43,7 @@ namespace TnyGames.Poker
         {
             Carte c = new Carte();
             char couleur = p[0];
-            char valeur = p[0];
+            char valeur = p[1];
 
             switch (couleur)
             {
