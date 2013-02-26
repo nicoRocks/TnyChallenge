@@ -19,7 +19,6 @@ namespace TnyGames.Morpion
             for (int i = 0; i < liste.Length; i++)
             {
                 Cases.Add(new Case{ Position = i+1,motif= (Motif)(int.Parse(liste.Substring(i, 1)))});
-
             }
             var nbZero = Cases.Where(x => x.motif == Motif.Vide).Count();
             var nbUn = Cases.Where(x => x.motif == Motif.Rond).Count();

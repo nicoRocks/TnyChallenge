@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using TnyGames.Morpion;
+using System.Diagnostics;
 
 namespace tnyConsole
 {
@@ -10,27 +11,37 @@ namespace tnyConsole
     {
         static void Main(string[] args)
         {
+            Stopwatch t = new Stopwatch();
+            t.Start();
             Moteur m = new Moteur();
-            var d = m.GetValue("200010002");
+            var d = m.GetValue("000210000");
             Console.WriteLine(d);
+            t.Stop();
+            Console.WriteLine(t.Elapsed);
+
             Console.ReadLine();
-            d = m.GetValue("100020000");
+
+
+             t = new Stopwatch();
+            t.Start();
+             m = new Moteur();
+             d = m.GetValue("000010000");
             Console.WriteLine(d);
+            t.Stop();
+            Console.WriteLine(t.Elapsed);
+
             Console.ReadLine();
-            d = m.GetValue("200010000");
+
+
+            t = new Stopwatch();
+            t.Start();
+            m = new Moteur();
+            d = m.GetValue("000000000");
             Console.WriteLine(d);
-            Console.ReadLine();
-            d = m.GetValue("100020000");
-            Console.WriteLine(d);
-            Console.ReadLine();
-            d = m.GetValue("200010000");
-            Console.WriteLine(d);
-            Console.ReadLine();
-            d = m.GetValue("100020000");
-            Console.WriteLine(d);
-            Console.ReadLine();
-            d = m.GetValue("000020000");
-            Console.WriteLine(d);
+            t.Stop();
+            Console.WriteLine(t.Elapsed);
+
+
             Console.ReadLine();
         }
     }

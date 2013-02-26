@@ -25,6 +25,5 @@ namespace NicoRocks.Controllers
 
             return Redirect(url);
         }
-
     }
 }

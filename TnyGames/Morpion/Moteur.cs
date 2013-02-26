@@ -16,7 +16,17 @@ namespace TnyGames.Morpion
 
             int max = -1000;
             int tmp = 0;
-            int position = 1; 
+            int position = 1;
+
+            if (plateau.Cases.Where(x => x.motif == Motif.Vide).Count() == 9)
+            {
+                return "1";
+            }
+            if (plateau.Cases.Where(x => x.motif == plateau.motifMin).Count() == 1 && plateau.Cases.Where(x => x.motif == Motif.Vide).Count() == 8)
+            {
+                var c = plateau.Cases.Where(x => x.motif == plateau.motifMin).First();
+                return c.Position==5?"1":"5";
+            }
 
             foreach (var c in plateau.Cases)
             {
@@ -35,6 +45,11 @@ namespace TnyGames.Morpion
                 }
             }
             return position.ToString() ;
+        }
+
+        private string debut(Plateau plateau)
+        {
+            throw new NotImplementedException();
         }
 
         private static int max(Plateau plateau)
