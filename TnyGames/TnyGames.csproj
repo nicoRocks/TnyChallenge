@@ -43,12 +43,11 @@
     <Compile Include="Morpion\Case.cs" />
     <Compile Include="Morpion\Moteur.cs" />
     <Compile Include="Morpion\Plateau.cs" />
+    <Compile Include="Poker\Moteur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shifumi\Moteur.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Poker\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
