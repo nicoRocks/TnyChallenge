@@ -14,7 +14,7 @@ namespace TnyGames.Morpion
         {
             Cases = new List<Case>();
         }
-        public Plateau(string liste) : this()
+        public Plateau(string liste,int ? dernierCoupJoue = null) : this()
         {
             for (int i = 0; i < liste.Length; i++)
             {
@@ -32,10 +32,13 @@ namespace TnyGames.Morpion
                 motifMax = Motif.Rond;
                 motifMin = Motif.Croix;
             }
-            else
+            else if (dernierCoupJoue != null)
             {
-                motifMax = Motif.Rond;
-                motifMin = Motif.Croix;
+                motifMin = Cases.Where(x => x.Position == dernierCoupJoue.Value).FirstOrDefault().motif;
+                if(motifMin ==Motif.Rond)
+                    motifMax = Motif.Croix;
+                else
+                    motifMax = Motif.Rond;
             }
         }
         public override string ToString()

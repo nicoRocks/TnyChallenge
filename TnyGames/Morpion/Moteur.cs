@@ -7,11 +7,11 @@ namespace TnyGames.Morpion
 {
     public class Moteur
     {
-        public string GetValue(string p)
+        public string GetValue(string p, int? dernierCoupJoue = null) 
         {
 
 
-            Plateau plateau = new Plateau(p);
+            Plateau plateau = new Plateau(p, dernierCoupJoue);
             Console.WriteLine(plateau.ToString());
 
             int max = -1000;
