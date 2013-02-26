@@ -18,11 +18,11 @@ namespace NicoRocks.Controllers
             var m1 = Request.QueryString["Move1"];
             var m2 = Request.QueryString["Move2"];
             int? dernierCoup=null;
-            if (m1 != null)
+            if (!string.IsNullOrWhiteSpace(m1))
             {
                 dernierCoup = int.Parse(m1);
             }
-            else if (m2 != null)
+            else if (!string.IsNullOrWhiteSpace(m2))
             {
                 dernierCoup = int.Parse(m2);
             }

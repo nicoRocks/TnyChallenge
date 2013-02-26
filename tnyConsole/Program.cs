@@ -14,7 +14,7 @@ namespace tnyConsole
             Stopwatch t = new Stopwatch();
             t.Start();
             Moteur m = new Moteur();
-            var d = m.GetValue("121000002");
+            var d = m.GetValue("121000002",2);
             Console.WriteLine(d);
             t.Stop();
             Console.WriteLine(t.Elapsed);
@@ -25,7 +25,7 @@ namespace tnyConsole
             t = new Stopwatch();
             t.Start();
             m = new Moteur();
-             d = m.GetValue("212000001");
+             d = m.GetValue("212000001",2);
             Console.WriteLine(d);
             t.Stop();
             Console.WriteLine(t.Elapsed);
